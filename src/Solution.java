@@ -5,7 +5,7 @@ import java.util.*;
 //Complete the code
 public class Solution
 {
-	static String   fileName = "C:\\Users\\Calde\\Desktop\\QAhomework\\src\\Test3.txt";
+	static String   fileName = "C:\\Users\\Calde\\Desktop\\QAhomework\\src\\input00.txt";
 	public static   File file  = new File(fileName);
 	
 
@@ -29,9 +29,16 @@ public static List<String> printStudents(List<Student> studentList) {
 	Collections.sort(studentList);	
 	for(Student st: studentList){		
 		ordenado.add(st.getFname());
-	System.out.println(st.getFname()+ " " + st.getId());
+	System.out.println(st.getFname());
 	
 }	return ordenado;}
+
+public static List<Student> sortStudents(List<Student> studentList) {
+	Collections.sort(studentList);
+	return studentList;
+	
+	
+}
 
 	
 	public static void main(String[] args) throws FileNotFoundException{
@@ -43,6 +50,7 @@ public static List<String> printStudents(List<Student> studentList) {
 		int testCases = Integer.parseInt(in.nextLine());		
 		
 		List<Student> studentList=CreateList(in,testCases);	 
+		sortStudents(studentList);
 		 printStudents(studentList);
       	
 	}
